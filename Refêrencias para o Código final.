@@ -1,1 +1,15 @@
 FUNÇÃO USADA PARA BUSCAR IMAGENS NO PRÓPRIO COMPUTADOR. 
+
+from PIL import Image
+import matplotlib.pyplot as plt
+import cv2
+
+imagem = Image.open("ECG Mariana 01.jpg")
+imagem = imagem.convert("RGB")
+imagem.save ('Testando ECG Mariana 01.jpg')
+
+imagemAlterada = cv2.imread ('Testando ECG Mariana 01.jpg')
+
+cv2.imshow('Imagem', imagemAlterada)
+cv2.waitKey(0)
+cv2.destroyAllWindows();
